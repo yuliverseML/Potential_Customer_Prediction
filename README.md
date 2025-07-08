@@ -1,48 +1,9 @@
 # Potential_Customer_Prediction
-Potential Customer Conversion Prediction
-# ExtraaLearn Lead Conversion Prediction
+
 
 ## Overview
 
-This project aims to predict the conversion of leads (potential customers) to paying customers for ExtraaLearn, an online education company. By analyzing lead behavior and characteristics, we develop machine learning models to identify patterns that indicate a higher likelihood of conversion. This enables targeted marketing efforts and optimized resource allocation.
-
-## Table of Contents
-
-- [Installation](#installation)
-- [Dataset](#dataset)
-- [Features](#features)
-  - [Data Exploration](#data-exploration)
-  - [Data Preprocessing](#data-preprocessing)
-  - [Model Training](#model-training)
-  - [Model Evaluation](#model-evaluation)
-  - [Visualization](#visualization)
-- [Results](#results)
-  - [Model Comparison](#model-comparison)
-  - [Best Model](#best-model)
-  - [Feature Importance](#feature-importance)
-- [Outcome](#outcome)
-- [Future Work](#future-work)
-- [Notes](#notes)
-- [Contributing](#contributing)
-- [License](#license)
-
-## Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/extraalearn-lead-conversion.git
-cd extraalearn-lead-conversion
-
-# Install required packages
-pip install -r requirements.txt
-```
-
-Requirements include:
-- pandas
-- numpy
-- matplotlib
-- seaborn
-- scikit-learn
+This project aims to predict the conversion of leads (potential customers) to paying customers for ExtraaLearn, an online education company. By analyzing lead behavior and characteristics, developed machine learning models to identify patterns that indicate a higher likelihood of conversion. This enables targeted marketing efforts and optimized resource allocation.
 
 ## Dataset
 
@@ -204,11 +165,6 @@ Top 15 features driving the prediction (from Random Forest model):
 
 Contributions to this project are welcome! Please follow these steps:
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
 
 ## License
 
