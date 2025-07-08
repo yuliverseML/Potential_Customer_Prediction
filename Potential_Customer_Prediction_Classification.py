@@ -24,6 +24,7 @@ from sklearn import metrics, tree
 # For Colab file upload functionality
 from google.colab import files
 
+##Block 2: Load and Explore Data
 # Upload file via Colab interface
 uploaded = files.upload()
 
@@ -54,6 +55,7 @@ print(data.isnull().sum())
 duplicates = data.duplicated().sum()
 print(f"\nNumber of duplicate rows: {duplicates}")
 
+##Block 3: Data Preprocessing
 # Separate numerical and categorical columns
 numerical_cols = data.select_dtypes(include=['int64', 'float64']).columns.tolist()
 categorical_cols = data.select_dtypes(include=['object']).columns.tolist()
@@ -68,6 +70,8 @@ if 'ID' in data.columns:
     data.drop(["ID"], axis=1, inplace=True)
     print("ID column has been dropped.")
 
+
+##Block 4: Exploratory Data Analysis (EDA)
 # Target variable distribution
 plt.figure(figsize=(10, 6))
 ax = sns.countplot(x='status', data=data, palette='viridis')
@@ -130,6 +134,8 @@ for col in categorical_cols:
             print(f"- {category}: {rate:.2f}%")
         print("\n")
 
+
+##Block 5: Feature Relationships
 # Correlation analysis for numerical features
 numeric_data = data[numerical_cols]
 corr_matrix = numeric_data.corr()
@@ -152,6 +158,8 @@ for col in categorical_cols:
         chi2, p, dof, expected = chi2_contingency(contingency)
         print(f"{col} - Chi2: {chi2:.2f}, p-value: {p:.4f}")
 
+
+##Block 6: Feature Engineering
 # Create a copy for feature engineering
 data_fe = data.copy()
 
@@ -203,6 +211,8 @@ plt.xlabel('Number of Marketing Channels', fontsize=12)
 plt.ylabel('Conversion Rate (%)', fontsize=12)
 plt.show()
 
+
+##Block 7: Data Preparation for Modeling
 # Choose dataset for modeling
 final_data = data_fe.copy()
 
@@ -231,6 +241,8 @@ print(y_train.value_counts(normalize=True) * 100)
 print("\nClass distribution in testing set:")
 print(y_test.value_counts(normalize=True) * 100)
 
+
+##Block 8: Model Evaluation Function
 # Function to evaluate and visualize model performance
 def evaluate_model(model, X_train, X_test, y_train, y_test, model_name):
     """
@@ -300,6 +312,8 @@ def evaluate_model(model, X_train, X_test, y_train, y_test, model_name):
         'roc_auc': test_roc_auc
     }
 
+
+##Block 9: Building Multiple Models
 # Initialize models
 models = {
     "Logistic Regression": LogisticRegression(random_state=42, max_iter=1000),
@@ -336,6 +350,8 @@ plt.legend(title='Metrics')
 plt.tight_layout()
 plt.show()
 
+
+##Block 10: Model Tuning
 # Identify the best performing model based on F1 score
 best_model_name = results_df['f1'].idxmax()
 print(f"The best performing model is: {best_model_name}")
@@ -397,6 +413,8 @@ best_tuned_model = grid_search.best_estimator_
 # Evaluate the tuned model
 tuned_results = evaluate_model(best_tuned_model, X_train, X_test, y_train, y_test, f"Tuned {best_model_name}")
 
+
+##Block 11: Feature Importance Analysis
 # Get feature importance from the best model
 if hasattr(best_tuned_model, 'feature_importances_'):
     # For tree-based models
@@ -461,6 +479,8 @@ elif hasattr(best_tuned_model, 'coef_'):
     plt.tight_layout()
     plt.show()
 
+
+##Block 12: Conclusion and Recommendations
 print("\n===== CONCLUSION AND RECOMMENDATIONS =====")
 
 # Summary of the best model
