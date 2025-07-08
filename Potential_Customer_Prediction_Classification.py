@@ -1,3 +1,4 @@
+##Block 1: Import Libraries and Setup
 # Suppress warnings to keep output clean
 import warnings
 warnings.filterwarnings("ignore")
