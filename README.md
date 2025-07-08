@@ -5,7 +5,7 @@
 
 This project aims to predict the conversion of leads (potential customers) to paying customers for ExtraaLearn, an online education company. By analyzing lead behavior and characteristics, developed machine learning models to identify patterns that indicate a higher likelihood of conversion. This enables targeted marketing efforts and optimized resource allocation.
 
-## Dataset
+## Dataset (Marketing data for customer conversion prediction) [ExtraaLearn Customer Dataset](https://github.com/yuliverseML/Potential_Customer_Prediction/blob/main/ExtraaLearn.csv) 
 
 The dataset contains 4,612 leads with 15 attributes describing their characteristics and interactions with ExtraaLearn:
 
